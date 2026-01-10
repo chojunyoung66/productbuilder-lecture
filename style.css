@@ -205,7 +205,7 @@ section {
     margin-bottom: 8px;
 }
 
-#all-menu li span {
+#all-menus li span {
     font-weight: bold;
     color: var(--text-color);
 }
@@ -323,4 +323,46 @@ body.dark-mode .form-status.error {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     transition: background-color 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header, main, section, footer {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #theme-toggle-btn {
+        position: static;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .menu-selector {
+        padding: 20px;
+    }
+
+    .result-card h3 {
+        font-size: 1.5rem;
+    }
+
+    #all-menus ul {
+        gap: 10px;
+    }
+
+    #all-menus li {
+        width: 100px;
+    }
 }
