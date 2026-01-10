@@ -35,8 +35,20 @@
 
     <section id="contact">
         <h2>문의</h2>
-        <p>웹사이트에 대한 문의나 제안이 있으시면 아래 이메일로 연락 주세요.</p>
-        <p>contact@example.com</p>
+        <p>제휴 문의 및 기타 궁금한 점이 있으시면 아래 양식을 통해 연락 주세요.</p>
+        <form id="contact-form" action="https://formspree.io/f/xdaanlqg" method="POST">
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">이메일:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">메시지:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">문의 보내기</button>
+            <div id="form-status" class="form-status"></div>
+        </form>
     </section>
 
     <footer>

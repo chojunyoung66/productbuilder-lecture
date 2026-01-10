@@ -1,3 +1,40 @@
+// --- Form Submission ---
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault(); // Prevent default form submission
+
+        formStatus.classList.remove('success', 'error');
+        formStatus.textContent = '메시지를 보내는 중...';
+
+        const formData = new FormData(contactForm);
+        const response = await fetch(contactForm.action, {
+            method: contactForm.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            formStatus.textContent = '문의가 성공적으로 전송되었습니다!';
+            formStatus.classList.add('success');
+            contactForm.reset(); // Clear form fields
+        } else {
+            const data = await response.json();
+            if (data.errors) {
+                formStatus.textContent = data.errors.map(error => error.message).join(', ');
+            } else {
+                formStatus.textContent = '문의 전송에 실패했습니다. 다시 시도해주세요.';
+            }
+            formStatus.classList.add('error');
+        }
+    });
+}
+
+
 const dinnerMenus = [
     { name: "치킨" },
     { name: "피자" },

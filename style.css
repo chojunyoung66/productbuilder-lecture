@@ -458,102 +458,348 @@ footer nav a {
 
 
 
-footer nav a:hover {
-
-    text-decoration: underline;
-
-}
+/* Form Styles */
 
 
 
-/* Styles for static pages like privacy.html */
-
-.static-page {
-
-    background: var(--card-background);
-
-    padding: 30px;
-
-    border-radius: var(--border-radius);
-
-    box-shadow: var(--shadow);
-
-    text-align: left;
-
-    transition: background-color 0.3s;
-
-}
+form {
 
 
 
-.static-page h2 {
+    display: flex;
+
+
+
+    flex-direction: column;
+
+
+
+    gap: 15px;
+
+
 
     margin-top: 20px;
 
-}
 
-
-
-.static-page p, .static-page ul {
-
-    margin-bottom: 15px;
 
 }
 
 
 
-.static-page ul {
-
-    padding-left: 20px;
-
-}
 
 
 
-.static-page a {
 
-    color: var(--primary-color);
+form label {
 
-    text-decoration: none;
+
 
     font-weight: bold;
 
-}
+
+
+    margin-bottom: 5px;
 
 
 
-.static-page a:hover {
-
-    text-decoration: underline;
-
-}
+    color: var(--text-color);
 
 
-
-.notice {
-
-    background-color: #fff3cd;
-
-    border-left: 6px solid #ffeeba;
-
-    padding: 15px;
-
-    margin-top: 20px;
-
-    border-radius: 4px;
-
-    color: #856404;
 
 }
 
 
 
-body.dark-mode .notice {
 
-    background-color: #332b00;
 
-    border-left-color: #665100;
 
-    color: #ffecb3;
+
+form input[type="text"],
+
+
+
+form input[type="email"],
+
+
+
+form textarea {
+
+
+
+    padding: 12px;
+
+
+
+    border: 1px solid var(--border-color);
+
+
+
+    border-radius: var(--border-radius);
+
+
+
+    background-color: var(--background-color);
+
+
+
+    color: var(--text-color);
+
+
+
+    font-family: 'Noto Sans KR', sans-serif;
+
+
+
+    font-size: 1rem;
+
+
+
+    transition: border-color 0.3s, background-color 0.3s;
+
+
+
+}
+
+
+
+
+
+
+
+form input[type="text"]:focus,
+
+
+
+form input[type="email"]:focus,
+
+
+
+form textarea:focus {
+
+
+
+    border-color: var(--primary-color);
+
+
+
+    outline: none;
+
+
+
+}
+
+
+
+
+
+
+
+form button[type="submit"] {
+
+
+
+    background-color: var(--primary-color);
+
+
+
+    color: #fff;
+
+
+
+    border: none;
+
+
+
+    padding: 12px 20px;
+
+
+
+    font-size: 1.1rem;
+
+
+
+    font-weight: 700;
+
+
+
+    border-radius: var(--border-radius);
+
+
+
+    cursor: pointer;
+
+
+
+    transition: background-color 0.3s, transform 0.2s;
+
+
+
+}
+
+
+
+
+
+
+
+form button[type="submit"]:hover {
+
+
+
+    background-color: #ff4757;
+
+
+
+    transform: translateY(-2px);
+
+
+
+}
+
+
+
+
+
+
+
+.form-status {
+
+
+
+    margin-top: 15px;
+
+
+
+    padding: 10px;
+
+
+
+    border-radius: var(--border-radius);
+
+
+
+    text-align: center;
+
+
+
+    font-weight: bold;
+
+
+
+}
+
+
+
+
+
+
+
+.form-status.success {
+
+
+
+    background-color: #d4edda;
+
+
+
+    color: #155724;
+
+
+
+}
+
+
+
+
+
+
+
+.form-status.error {
+
+
+
+    background-color: #f8d7da;
+
+
+
+    color: #721c24;
+
+
+
+}
+
+
+
+
+
+
+
+/* Dark mode adjustments for form */
+
+
+
+body.dark-mode form input[type="text"],
+
+
+
+body.dark-mode form input[type="email"],
+
+
+
+body.dark-mode form textarea {
+
+
+
+    border: 1px solid var(--border-color);
+
+
+
+    background-color: #333;
+
+
+
+    color: var(--text-color);
+
+
+
+}
+
+
+
+
+
+
+
+body.dark-mode .form-status.success {
+
+
+
+    background-color: #1b5e20;
+
+
+
+    color: #c8e6c9;
+
+
+
+}
+
+
+
+
+
+
+
+body.dark-mode .form-status.error {
+
+
+
+    background-color: #7f0000;
+
+
+
+    color: #ffcdd2;
+
+
 
 }
