@@ -18,33 +18,48 @@
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#app {
+header, main, section, footer {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+header {
     text-align: center;
-    padding: 40px;
-    background: var(--white-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    width: 90%;
-    max-width: 500px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 20px;
 }
 
 h1 {
     color: var(--primary-color);
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 
-p {
-    margin-bottom: 32px;
-    font-size: 1.1rem;
-    line-height: 1.6;
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+main {
+    text-align: center;
+}
+
+.menu-selector {
+    background: var(--white-color);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 
 #suggestion-btn {
@@ -95,4 +110,87 @@ p {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+section {
+    background: var(--white-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+#all-menus ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#all-menus li {
+    background: #f1f1f1;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+footer nav {
+    margin-top: 10px;
+}
+
+footer nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for static pages like privacy.html */
+.static-page {
+    background: var(--white-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.static-page h2 {
+    margin-top: 20px;
+}
+
+.static-page p, .static-page ul {
+    margin-bottom: 15px;
+}
+
+.static-page ul {
+    padding-left: 20px;
+}
+
+.static-page a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.static-page a:hover {
+    text-decoration: underline;
+}
+
+.notice {
+    background-color: #fff3cd;
+    border-left: 6px solid #ffeeba;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 4px;
 }

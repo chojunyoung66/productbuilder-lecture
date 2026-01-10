@@ -29,3 +29,20 @@
 2.  **[완료]** `index.html` 기본 구조 설정
 3.  **[완료]** `style.css` 기본 스타일링 적용
 4.  **[완료]** `main.js` 핵심 로직 및 웹 컴포넌트 구현
+5.  **[완료]** GitHub 저장소에 코드 푸시 완료
+
+## 다음 단계: GitHub Pages 배포 활성화
+
+애플리케이션을 웹에서 접근할 수 있도록 GitHub Pages를 활성화해야 합니다. 다음 지침을 따르세요:
+
+1.  **GitHub 저장소 방문:** 웹 브라우저에서 `https://github.com/chojunyoung66/productbuilder-lecture` 로 이동하세요.
+2.  **"Settings" 탭 클릭:** 저장소 페이지 상단에 있는 "Settings" 탭을 클릭합니다.
+3.  **"Pages" 메뉴 선택:** 왼쪽 사이드바에서 "Pages"를 클릭합니다.
+4.  **"Branch" 설정:**
+    *   "Branch" 드롭다운 메뉴에서 `main` (또는 `master` 브랜치를 사용했다면 `master`)을 선택합니다.
+    *   옆의 폴더 드롭다운 메뉴에서 `/root` (또는 `/(root)`)를 선택합니다.
+5.  **"Save" 버튼 클릭:** 설정을 저장합니다.
+
+GitHub Pages가 자동으로 빌드를 시작하고 몇 분 안에 사이트가 배포될 것입니다. 배포가 완료되면 "Pages" 설정 페이지에서 라이브 사이트의 URL을 확인할 수 있습니다.
+
+이제 앱이 GitHub에 배포되었고 GitHub Pages를 통해 웹에서 접근할 수 있게 됩니다.

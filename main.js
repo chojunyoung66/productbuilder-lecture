@@ -21,6 +21,16 @@ const dinnerMenus = [
 
 const suggestionBtn = document.getElementById('suggestion-btn');
 const resultContainer = document.getElementById('result-container');
+const menuList = document.getElementById('menu-list');
+
+// Function to populate the list of all menus
+function populateMenuList() {
+    dinnerMenus.forEach(menu => {
+        const li = document.createElement('li');
+        li.textContent = menu;
+        menuList.appendChild(li);
+    });
+}
 
 suggestionBtn.addEventListener('click', () => {
     // Clear previous result and show a thinking message
@@ -52,3 +62,6 @@ suggestionBtn.addEventListener('click', () => {
         suggestionBtn.disabled = false;
     }, 1500); // 1.5 seconds delay
 });
+
+// Populate the menu list when the page loads
+document.addEventListener('DOMContentLoaded', populateMenuList);
