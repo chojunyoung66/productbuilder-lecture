@@ -1,0 +1,4 @@
+# Allow all user agents to crawl all content
+User-agent: *
+Allow: /
+Sitemap: https://chojunyoung66.github.io/productbuilder-lecture/sitemap.xml

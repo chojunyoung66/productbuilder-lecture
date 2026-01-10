@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="매일 저녁 메뉴 고민을 해결해주는 '오늘 뭐 먹지?' 웹사이트입니다. 버튼 하나로 간단하게 저녁 메뉴를 추천받고, 음식 관련 재미있는 가이드도 읽어보세요.">
+    <meta name="keywords" content="저녁 메뉴, 메뉴 추천, 저녁 식사, 오늘 뭐 먹지, 음식, 요리">
     <title>오늘 뭐 먹지? - 저녁 메뉴 선택기</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>오늘 뭐 먹지?</h1>
-        <p>저녁 메뉴를 고민하고 있나요? 아래 버튼을 눌러 오늘의 저녁 메뉴를 추천받아보세요!</p>
+        <h1><a href="index.html" class="header-link">오늘 뭐 먹지?</a></h1>
+        <nav class="main-nav">
+            <a href="index.html">홈</a>
+            <a href="article1.html">치킨 가이드</a>
+            <a href="article2.html">비 오는 날 메뉴</a>
+            <a href="#contact">문의</a>
+        </nav>
         <button id="theme-toggle-btn">🌙 다크 모드</button>
     </header>
 
     <main>
+        <div class="intro">
+            <h2>저녁 메뉴, 더 이상 고민하지 마세요!</h2>
+            <p>아래 버튼을 눌러 오늘의 저녁 메뉴를 추천받아보세요.</p>
+        </div>
         <div class="menu-selector">
             <button id="suggestion-btn">메뉴 추천받기</button>
             <div id="result-container"></div>
