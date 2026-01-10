@@ -22,10 +22,36 @@ const dinnerMenus = [
 const suggestionBtn = document.getElementById('suggestion-btn');
 const resultContainer = document.getElementById('result-container');
 const menuList = document.getElementById('menu-list');
+const themeToggleBtn = document.getElementById('theme-toggle-btn');
+
+// --- Theme Toggling ---
+const currentTheme = localStorage.getItem('theme');
+
+// Apply the saved theme on initial load
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeToggleBtn.textContent = '☀️ 라이트 모드';
+}
+
+themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    let theme = 'light';
+    if (document.body.classList.contains('dark-mode')) {
+        theme = 'dark';
+        themeToggleBtn.textContent = '☀️ 라이트 모드';
+    } else {
+        themeToggleBtn.textContent = '🌙 다크 모드';
+    }
+    localStorage.setItem('theme', theme);
+});
+
+
+// --- Menu Suggestion ---
 
 // Function to get an image URL from Unsplash Source
 function getUnsplashImageUrl(query, width, height) {
-    return `https://source.unsplash.com/${width}x${height}/?${query}`;
+    return `https://source.unsplash.com/${width}x${height}/?${query},food`;
 }
 
 // Function to populate the list of all menus
@@ -35,8 +61,7 @@ function populateMenuList() {
         const li = document.createElement('li');
         
         const img = document.createElement('img');
-        // Use a more specific query for better images, e.g., "korean food"
-        img.src = getUnsplashImageUrl(menu.name + ',food', 120, 80);
+        img.src = getUnsplashImageUrl(menu.name, 120, 80);
         img.alt = menu.name;
         
         const span = document.createElement('span');
@@ -67,7 +92,7 @@ suggestionBtn.addEventListener('click', () => {
         resultCard.classList.add('result-card');
         
         const img = document.createElement('img');
-        img.src = getUnsplashImageUrl(selectedMenu.name + ',food', 300, 200);
+        img.src = getUnsplashImageUrl(selectedMenu.name, 300, 200);
         img.alt = selectedMenu.name;
         
         const h3 = document.createElement('h3');
