@@ -80,7 +80,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/kore-saju@1.0.1/bundle/kore-saju.min.js"></script>
     <script>
+        console.log('After kore-saju.min.js load, typeof Saju:', typeof Saju, Saju);
+    </script>
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
+            console.log('Inside DOMContentLoaded, typeof Saju:', typeof Saju, Saju);
             const sajuForm = document.getElementById('saju-form');
             const resultContainer = document.getElementById('saju-result');
 
