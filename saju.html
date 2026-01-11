@@ -78,13 +78,10 @@
         <p>&copy; 2026 오늘 뭐 먹지?. 모든 권리 보유.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/kore-saju@1.0.1/bundle/kore-saju.min.js"></script>
-    <script>
-        console.log('After kore-saju.min.js load, typeof Saju:', typeof Saju, Saju);
-    </script>
-    <script>
+    <script type="module">
+        import { Saju } from 'https://cdn.jsdelivr.net/npm/kore-saju@1.0.1/bundle/kore-saju.min.js';
+
         document.addEventListener('DOMContentLoaded', () => {
-            console.log('Inside DOMContentLoaded, typeof Saju:', typeof Saju, Saju);
             const sajuForm = document.getElementById('saju-form');
             const resultContainer = document.getElementById('saju-result');
 
