@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="생년월일시를 입력하여 당신의 사주팔자를 확인해보세요. 천간과 지지를 포함한 사주 정보를 제공합니다.">
+    <meta name="keywords" content="사주, 사주팔자, 만세력, 운세, 생년월일, 사주풀이">
+    <title>사주풀이 - 오늘 뭐 먹지?</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1058017818337978"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" class="header-link">오늘 뭐 먹지?</a></h1>
+        <nav class="main-nav">
+            <a href="index.html">홈</a>
+            <a href="article1.html">치킨 가이드</a>
+            <a href="article2.html">비 오는 날 메뉴</a>
+            <a href="saju.html">사주풀이</a>
+            <a href="#contact">문의</a>
+        </nav>
+        <button id="theme-toggle-btn">🌙 다크 모드</button>
+    </header>
+
+    <main>
+        <section id="saju-calculator">
+            <h2>사주팔자 계산기</h2>
+            <p>당신의 생년월일시를 입력하고 '결과 보기' 버튼을 누르세요.</p>
+            <form id="saju-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="year">년(年):</label>
+                        <input type="number" id="year" name="year" placeholder="예: 1990" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="month">월(月):</label>
+                        <input type="number" id="month" name="month" placeholder="1-12" min="1" max="12" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="day">일(日):</label>
+                        <input type="number" id="day" name="day" placeholder="1-31" min="1" max="31" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hour">시(時):</label>
+                        <select id="hour" name="hour" required>
+                            <option value="23">23:30 ~ 01:29 (자시)</option>
+                            <option value="1">01:30 ~ 03:29 (축시)</option>
+                            <option value="3">03:30 ~ 05:29 (인시)</option>
+                            <option value="5">05:30 ~ 07:29 (묘시)</option>
+                            <option value="7">07:30 ~ 09:29 (진시)</option>
+                            <option value="9">09:30 ~ 11:29 (사시)</option>
+                            <option value="11">11:30 ~ 13:29 (오시)</option>
+                            <option value="13">13:30 ~ 15:29 (미시)</option>
+                            <option value="15">15:30 ~ 17:29 (신시)</option>
+                            <option value="17">17:30 ~ 19:29 (유시)</option>
+                            <option value="19">19:30 ~ 21:29 (술시)</option>
+                            <option value="21">21:30 ~ 23:29 (해시)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">성별:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="male">남자</option>
+                            <option value="female">여자</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit">결과 보기</button>
+            </form>
+            <div id="saju-result" class="saju-result">
+                <!-- 결과가 여기에 표시됩니다 -->
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 오늘 뭐 먹지?. 모든 권리 보유.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/kore-saju@1.0.1/bundle/kore-saju.min.js"></script>
+    <script src="saju.js"></script>
+    <script src="main.js" type="module"></script>
+</body>
+</html>
