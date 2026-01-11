@@ -50,7 +50,8 @@
 12. **[완료]** AdSense 자동 광고 스크립트 추가
 13. **[완료]** 생년월일시 입력 사주풀이 기능 추가
 14. **[완료]** "Saju is not defined" 오류 수정
-15. **[진행중]** "Saju is not defined" 오류 진단을 위한 로그 추가
+15. **[완료]** "Saju is not defined" 오류 진단을 위한 로그 추가
+16. **[완료]** "Saju is not defined" 오류 및 "main.js TypeError" 수정
 
 
 
